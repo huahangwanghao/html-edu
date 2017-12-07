@@ -33,7 +33,7 @@
         <script src="javascript/respond.min.js"></script>
     <![endif]-->
 </head>                                 
-<body> 
+<body ng-app="myApp"> 
     <!-- Preloader -->
     <section class="loading-overlay">
         <div class="Loading-Page">
@@ -176,13 +176,15 @@
                                                             </article>
                                                         </li>
                                             </ol>
-                                            <div id="respond" class="comment-respond">
+                                            <div ng-controller="validateCtrl"  id="respond" class="comment-respond">
                                                 <h4 class="comment-reply-title">LEAVE A COMMENT</h4>
-                                                <form action="#" method="post" id="commentform" class="comment-form">
-                                                    <p class="comment-form-author">
-                                                        <input type="text" id="author" name="author" value="" required="required" placeholder="Name">
+                                                <form name="myForm" novalidate action="#" method="post" id="commentform" class="comment-form">
+                                                    <p class="comment-form-author" style="display: block; width: 60%;">
+                                                        <input ng-model="user" style="display: block;float: left;width: 70%;" type="text" id="author" name="author"  required="required" >
+                                                        <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                                                        <span style="display: block; float: left;" ng-show="myForm.user.$error.required">{{user}}用户名是必须的。</span>
                                                     </p>
-                                                    <p class="comment-form-email">
+                                                    <p class="comment-form-email" style="display: block; width: 60%;">
                                                         <input type="text" id="email" name="email" value="" required="required" placeholder="Email">
                                                     </p>
                                                     <p class="comment-form-comment">
@@ -227,5 +229,15 @@
     <script type="text/javascript" src="javascript/jquery.easing.js"></script>
     <script type="text/javascript" src="javascript/jquery.flexslider.js"></script>
     <script src="common/common.js"></script>
+    <script src="javascript/angular.min.js"></script>
+    <script>
+    	
+    	var app = angular.module('myApp', []);
+			app.controller('validateCtrl', function($scope) {
+			     $scope.user = 'John Doe';
+    			 $scope.email = 'john.doe@gmail.com';
+			});
+    	
+    </script>
 </body>
 </html>
