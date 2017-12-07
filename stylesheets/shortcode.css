@@ -1011,12 +1011,12 @@
     padding-left: 3px;
 }
 
-.portfolio .entry .entry-post .entry-author {
+.portfolio .entry .entry-post .ajust-person {
     margin-bottom: 26px;
     padding-left: 3px;
 }
 
-.portfolio .entry .entry-post .entry-author span {
+.portfolio .entry .entry-post .ajust-person span {
     position: relative;
     font-size: 16px;
 } 
@@ -1067,14 +1067,14 @@
     line-height: 26px;
 }
 
-.portfolio.style2 .entry .entry-post .entry-author span,
-.portfolio.style2 .entry .entry-post .entry-author span a {
+.portfolio.style2 .entry .entry-post .ajust-person span,
+.portfolio.style2 .entry .entry-post .ajust-person span a {
     color: #ffbf43;
     font-style: italic;
     font-size: 14px;
 }
 
-.portfolio.style2 .entry .entry-post .entry-author span a:hover {
+.portfolio.style2 .entry .entry-post .ajust-person span a:hover {
     color: #22272b;
 }
 
@@ -1082,7 +1082,7 @@
     margin-bottom: 6px;
 }
 
-.portfolio.style2 .entry .entry-post .entry-author {
+.portfolio.style2 .entry .entry-post .ajust-person {
     margin-bottom: 30px;
 }
 
@@ -1126,16 +1126,16 @@
     margin-bottom: 1px;
 }
 
-.portfolio.style3 .entry .entry-post .entry-author {
+.portfolio.style3 .entry .entry-post .ajust-person {
     margin-bottom: 21px;
     padding-left: 0px;
 }
 
-.portfolio.style3 .entry .entry-post .entry-author span {
+.portfolio.style3 .entry .entry-post .ajust-person span {
     font-size: 12px;
 }
 
-.portfolio.style3 .entry .entry-post .entry-author span a {
+.portfolio.style3 .entry .entry-post .ajust-person span a {
     font-size: 12px;
 }
 .portfolio.style3 .entry-number .entry-count,
@@ -1179,7 +1179,7 @@
 }
 
 .portfolio.style4 .entry .entry-post h3.entry-title a,
-.portfolio.style4 .entry .entry-post .entry-author span {
+.portfolio.style4 .entry .entry-post .ajust-person span {
     padding-left: 4px;
 }
 
@@ -2080,7 +2080,7 @@ article.pricing-table:hover .pricing-header::after {
     padding-left: 4px;
 }
 
-.wrap-course-details .entry .entry-post .entry-author {
+.wrap-course-details .entry .entry-post .ajust-person {
     padding-left: 4px;
 }
 
@@ -2088,13 +2088,13 @@ article.pricing-table:hover .pricing-header::after {
     padding-left: 41px;
 }
 
-.wrap-course-details .entry .entry-post .entry-author span.calendar {
+.wrap-course-details .entry .entry-post .ajust-person span.calendar {
     color: #6f787f;
     margin-left: 1px;
     padding-left: 7px;
 }
 
-.wrap-course-details .entry .entry-post .entry-author span.calendar::before {
+.wrap-course-details .entry .entry-post .ajust-person span.calendar::before {
     position: absolute;
     left: 0;
     top: 3px;

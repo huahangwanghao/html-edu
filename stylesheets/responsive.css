@@ -115,7 +115,7 @@
 	    margin-bottom: 0px;
 	}
 
-	.blog-zigzac2 .entry .entry-post .entry-author {
+	.blog-zigzac2 .entry .entry-post .ajust-person {
 	    margin-bottom: 8px;
 	}
 
@@ -644,8 +644,8 @@
 		line-height: 35px;
     }
 
-    .blog-list1 .entry .entry-post .entry-author,
-    .blog-zigzac1 .entry .entry-post .entry-author {
+    .blog-list1 .entry .entry-post .ajust-person,
+    .blog-zigzac1 .entry .entry-post .ajust-person {
 	    margin-bottom: 8px;
 	}
 
