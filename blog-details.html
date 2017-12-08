@@ -192,11 +192,17 @@
 													    <span ng-show="myForm.email.$error.email">非法的邮箱。</span>
 													  </span>
                                                     </p>
+                                                    <p class="comment-form-author">
+                                                        <input type="text" name="phone" ng-model="phone" required placeholder="手机号">
+                                                        <span style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+													    <span ng-show="myForm.email.$error.required">手机号是必须的。</span>
+													  </span>
+                                                    </p>
                                                     <p class="comment-form-comment">
                                                         <textarea id="comment" name="comment" required="required" placeholder="留言板"></textarea>
                                                     </p>
                                                     <p class="form-submit">
-                                                        <input type="button" name="submit" id="submit" class="submit" value="SEND MESSAGES">
+                                                        <input type="button" name="submit" id="submit" class="submit" value="提交">
                                                     </p>
                                                     
                                                 </form>
