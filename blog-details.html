@@ -178,21 +178,27 @@
                                             </ol>
                                             <div ng-controller="validateCtrl"  id="respond" class="comment-respond">
                                                 <h4 class="comment-reply-title">LEAVE A COMMENT</h4>
-                                                <form name="myForm" novalidate action="#" method="post" id="commentform" class="comment-form">
-                                                    <p class="comment-form-author" style="display: block; width: 60%;">
-                                                        <input ng-model="user" style="display: block;float: left;width: 70%;" type="text" id="author" name="author"  required="required" >
-                                                        <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
-                                                        <span style="display: block; float: left;" ng-show="myForm.user.$error.required">{{user}}用户名是必须的。</span>
+                                                <form name="myForm" novalidate action="#" method="post" id="myForm" class="comment-form">
+                                                    <p class="comment-form-author" >
+                                                         <input type="text" name="user" ng-model="user" required placeholder="姓名">
+														  <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+														  <span ng-show="myForm.user.$error.required">用户名是必须的。</span>
+														  </span>
                                                     </p>
-                                                    <p class="comment-form-email" style="display: block; width: 60%;">
-                                                        <input type="text" id="email" name="email" value="" required="required" placeholder="Email">
+                                                    <p class="comment-form-email">
+                                                        <input type="email" name="email" ng-model="email" required placeholder="邮箱">
+                                                        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+													    <span ng-show="myForm.email.$error.required">邮箱是必须的。</span>
+													    <span ng-show="myForm.email.$error.email">非法的邮箱。</span>
+													  </span>
                                                     </p>
                                                     <p class="comment-form-comment">
-                                                        <textarea id="comment" name="comment" required="required" placeholder="Your Comment"></textarea>
+                                                        <textarea id="comment" name="comment" required="required" placeholder="留言板"></textarea>
                                                     </p>
                                                     <p class="form-submit">
                                                         <input type="button" name="submit" id="submit" class="submit" value="SEND MESSAGES">
                                                     </p>
+                                                    
                                                 </form>
                                             </div><!-- /.comment-respond --> 
                                         </div><!-- /.wrap-comment -->
@@ -234,8 +240,7 @@
     	
     	var app = angular.module('myApp', []);
 			app.controller('validateCtrl', function($scope) {
-			     $scope.user = 'John Doe';
-    			 $scope.email = 'john.doe@gmail.com';
+			    
 			});
     	
     </script>
